@@ -1,8 +1,8 @@
 <div align="center">
 
-# singtome: AI models
+# GASBT: AWS LAMBDA
 
-*introducing the AI models used in the SINGTOME project.*
+*GASBY의 서비스 아키텍쳐에 사용된 LAMBDA 코드 입니다.*
 
 [![Static Badge](https://img.shields.io/badge/language-english-red)](./README.md) [![Static Badge](https://img.shields.io/badge/language-korean-blue)](./README-KR.md) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FSinging-voice-conversion%2Fsingtome-model&count_bg=%23E3E30F&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
