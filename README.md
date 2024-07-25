@@ -146,7 +146,11 @@ BING 서비스는 최신 생성 AI 알고리즘을 사용하여 실시간으로 
 ## 2. Architecture
 
 LAMBDA : S3에서 트리거를 받아 모델 예측 요청 및 결과값 S3에 저장
+
+
 s3 : 사용자의 입력, 각 모델의 결과를 저장하기 위한 저장소
+
+
 on-premise: 모델 학습, 예측을 위한 GPU 엔드포인트 서버
 
 <img width="852" alt="image" src="https://github.com/user-attachments/assets/b7d47d98-ddc3-4333-b090-e3cf7a575ec5">
