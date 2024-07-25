@@ -145,27 +145,12 @@ BING 서비스는 최신 생성 AI 알고리즘을 사용하여 실시간으로 
 
 ## 2. Architecture
 
-This project was designed with a real-service environment in mind and selected AWS (Amazon Web Services) to handle all training and inference tasks in the cloud. Utilizing AWS's robust cloud infrastructure, the following services were employed for model training and inference:
+LAMBDA : S3에서 트리거를 받아 모델 예측 요청 및 결과값 S3에 저장
+s3 : 사용자의 입력, 각 모델의 결과를 저장하기 위한 저장소
+on-premise: 모델 학습, 예측을 위한 GPU 엔드포인트 서버
 
-1. **Amazon SageMaker**: Used for model training, SageMaker is a fully managed service that allows for the easy and quick construction, training, and deployment of machine learning models.
-2. **AWS Lambda**: Employed as a trigger for training and inference tasks, Lambda is an event-driven computing service that runs code without managing servers.
+<img width="852" alt="image" src="https://github.com/user-attachments/assets/b7d47d98-ddc3-4333-b090-e3cf7a575ec5">
 
-<br>
-
-The cloud-based workflow of this project generally involves the following steps:
-
-1. **Receiving User Requests**: Receives requests for original music conversion from users.
-2. **Activating Lambda Triggers**: An AWS Lambda function is triggered to process the request.
-3. **Training and Inference in SageMaker**: The Lambda function calls Amazon SageMaker to carry out model training and inference tasks.
-4. **Returning Results**: Delivers the converted music file to the user.
-
-<br>
-
-This architecture is designed to leverage the cloud's flexibility and scalability to the fullest, ensuring a high-quality user experience. Model training and inference proceed automatically based on user requests, with all processes managed through cloud services.
-
-<img src="./img/aws_architecture.png" />
-
-<br>
 
 ## 3. How does it work?
 
