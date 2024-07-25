@@ -32,13 +32,128 @@ SW중심대학 디지털 경진대회: SW와 생성 AI의 만남 - SW 부문
 
 <br>
 
-## 1. Pipeline
+## 1. LAMBDA 소개
 
+저희는 총 7개의 LAMBDA를 사용합니다. 
 
-In this project, we've implemented a complex process to transform original music tracks into a specific user's voice. To achieve this, we utilized two main models:
+## upload-gasby-request(완료)
 
-1. **UVR (Ultimate Vocal Remover)**: This model separates the background music (MR) and vocals in a music track. Based on a pretrained model, UVR achieves high-quality separation of music and vocals.
-2. **RVC (Retrieval Voice Conversion)**: This model is responsible for converting the separated vocals into a specific user's voice. RVC learns the characteristics of a user's voice and applies this to the actual music to create the final output.
+https://ap-northeast-2.console.aws.amazon.com/lambda/home?region=ap-northeast-2#/functions/upload-gasby-request - 
+
+- **Role**: 유저의 영상 업로드 및 요청
+- **Endpoint**: https://nj7ceu0i9c.execute-api.ap-northeast2.amazonaws.com/deploy/request
+
+- **Method**: Post
+- Request Example:
+    
+    ```python
+    import requests
+    import base64
+    
+    url = 'https://nj7ceu0i9c.execute-api.ap-northeast-2.amazonaws.com/deploy/request'
+    
+    # user 요청받아서 만들기
+    file_path = '/Users/jungheechan/Desktop/kakao.mp4'
+    userId = '1'
+    
+    # 파일을 base64로 인코딩
+    with open(file_path, 'rb') as f:
+        file_content = f.read()
+        file_content_base64 = base64.b64encode(file_content).decode('utf-8')
+    
+    # HTTP POST 요청 보내기
+    payload = {
+        'file': file_content_base64,
+        'userId': userId  
+    }
+    
+    response = requests.post(url, json=payload)
+    
+    # 응답 확인
+    print(response.status_code)
+    print(response.json())
+    ```
+    
+
+- **Trigger: API Gateway**
+
+## **run-mot(완료)**
+
+https://ap-northeast-2.console.aws.amazon.com/lambda/home?region=ap-northeast-2#/functions/run-mot
+
+- **Role**: 유저의 요청에 따른 MOT predict 실행
+- **Endpoint**: Trigger로 작동
+
+- **Trigger: S3- [gasby-req](https://ap-northeast-2.console.aws.amazon.com/s3/buckets/gasby-req?region=ap-northeast-2)**
+- Response:
+    
+    ```python
+    {
+    'payload': userId
+    }
+    ```
+    
+
+## run-actrecog(진행중)
+
+https://ap-northeast-2.console.aws.amazon.com/lambda/home?region=ap-northeast-2#/functions/run-actrecog
+
+- **Role**: 유저의 요청에 따른 action recognition predict 실행
+- **Endpoint**: Trigger로 작동
+
+- **Trigger: S3- [gasby-mot-result](https://ap-northeast-2.console.aws.amazon.com/s3/buckets/gasby-mot-result?region=ap-northeast-2)**
+- Response:
+    
+    ```python
+    {
+    'payload': userId
+    }
+    ```
+    
+
+## mot-trigger(시작전)
+
+https://ap-northeast-2.console.aws.amazon.com/lambda/home?region=ap-northeast-2#/functions/mot-trigger
+
+- **Role**: 새로운 pt 파일 생성시 MOT train 실행
+- **Endpoint**: Trigger로 작동
+
+- **Trigger: S3- [gasby-mot](https://ap-northeast-2.console.aws.amazon.com/s3/buckets/gasby-mot?region=ap-northeast-2)**
+- Response:
+    
+    ```python
+     payload = {
+            'file_url': file_url
+        }
+    ```
+    
+
+## actrecog-trigger(시작전)
+
+https://ap-northeast-2.console.aws.amazon.com/lambda/home?region=ap-northeast-2#/functions/actrecog-trigger
+
+- **Role**: 새로운 pt 파일 생성시 action recognition train 실행
+- **Endpoint**: Trigger로 작동
+
+- **Trigger: S3 -  [gasby-actrecog](https://ap-northeast-2.console.aws.amazon.com/s3/buckets/gasby-actrecog?region=ap-northeast-2)**
+- Response:
+    
+    ```python
+     payload = {
+            'file_url': file_url
+        }
+    ```
+    
+
+### GPT
+
+https://ap-northeast-2.console.aws.amazon.com/lambda/home?region=ap-northeast-2#/functions/gpt
+
+- **Role**: 최종 Action Recog 결과물(action.json)으로 해설 생성
+- **Endpoint**: Trigger로 작동
+
+- **Trigger: S3 -** [gasby-actrecog-result](https://ap-northeast-2.console.aws.amazon.com/s3/buckets/gasby-actrecog-result?region=ap-northeast-2)
+
 
 <br>
 
