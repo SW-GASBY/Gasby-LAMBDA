@@ -20,8 +20,8 @@ Hello, and thank you for visiting. This GitHub repository contains the implement
 
 | Profile | Name | Role |
 | :---: | :---: | :---: |
-| <a href="https://github.com/jmin314"><img src="https://avatars.githubusercontent.com/u/30928301?v=4(https://avatars.githubusercontent.com/u/30928301?v=4)" height="120px"></a>| Jongmoon Ryu <br> **moon**| Model Pipeline and Architecture Design <br> Creating a Docker Image for RVC Model training and inference<br> Managing and Operating AWS SageMaker |
 | <a href="https://github.com/anselmo228"><img src="https://avatars.githubusercontent.com/u/24919880?v=4" height="120px"></a> | Heechan Chung <br> **anselmo**| Create a Docker Image for Inferring UVR Models <br> Manage AWS S3 buckets, Lambda, and API gateways <br> Managing singtome project model experiments|
+| <a href="https://github.com/jmin314"><img src="https://avatars.githubusercontent.com/u/30928301?v=4(https://avatars.githubusercontent.com/u/30928301?v=4)" height="120px"></a>| MinSeung Jang <br> **moon**| Model Pipeline and Architecture Design <br> Creating a Docker Image for RVC Model training and inference<br> Managing and Operating AWS SageMaker |
 
 <br>
 
