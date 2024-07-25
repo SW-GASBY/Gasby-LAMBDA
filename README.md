@@ -36,10 +36,7 @@ SW중심대학 디지털 경진대회: SW와 생성 AI의 만남 - SW 부문
 
 저희는 총 7개의 LAMBDA를 사용합니다. 
 
-## upload-gasby-request(완료)
-
-https://ap-northeast-2.console.aws.amazon.com/lambda/home?region=ap-northeast-2#/functions/upload-gasby-request - 
-
+## upload-gasby-request
 - **Role**: 유저의 영상 업로드 및 요청
 - **Endpoint**: https://nj7ceu0i9c.execute-api.ap-northeast2.amazonaws.com/deploy/request
 
@@ -74,13 +71,9 @@ https://ap-northeast-2.console.aws.amazon.com/lambda/home?region=ap-northeast-2#
     print(response.json())
     ```
     
-
 - **Trigger: API Gateway**
 
-## **run-mot(완료)**
-
-https://ap-northeast-2.console.aws.amazon.com/lambda/home?region=ap-northeast-2#/functions/run-mot
-
+## **run-mot**
 - **Role**: 유저의 요청에 따른 MOT predict 실행
 - **Endpoint**: Trigger로 작동
 
@@ -94,10 +87,7 @@ https://ap-northeast-2.console.aws.amazon.com/lambda/home?region=ap-northeast-2#
     ```
     
 
-## run-actrecog(진행중)
-
-https://ap-northeast-2.console.aws.amazon.com/lambda/home?region=ap-northeast-2#/functions/run-actrecog
-
+## run-actrecog
 - **Role**: 유저의 요청에 따른 action recognition predict 실행
 - **Endpoint**: Trigger로 작동
 
@@ -111,10 +101,7 @@ https://ap-northeast-2.console.aws.amazon.com/lambda/home?region=ap-northeast-2#
     ```
     
 
-## mot-trigger(시작전)
-
-https://ap-northeast-2.console.aws.amazon.com/lambda/home?region=ap-northeast-2#/functions/mot-trigger
-
+## mot-trigger
 - **Role**: 새로운 pt 파일 생성시 MOT train 실행
 - **Endpoint**: Trigger로 작동
 
@@ -128,10 +115,7 @@ https://ap-northeast-2.console.aws.amazon.com/lambda/home?region=ap-northeast-2#
     ```
     
 
-## actrecog-trigger(시작전)
-
-https://ap-northeast-2.console.aws.amazon.com/lambda/home?region=ap-northeast-2#/functions/actrecog-trigger
-
+## actrecog-trigger
 - **Role**: 새로운 pt 파일 생성시 action recognition train 실행
 - **Endpoint**: Trigger로 작동
 
@@ -146,9 +130,6 @@ https://ap-northeast-2.console.aws.amazon.com/lambda/home?region=ap-northeast-2#
     
 
 ### GPT
-
-https://ap-northeast-2.console.aws.amazon.com/lambda/home?region=ap-northeast-2#/functions/gpt
-
 - **Role**: 최종 Action Recog 결과물(action.json)으로 해설 생성
 - **Endpoint**: Trigger로 작동
 
