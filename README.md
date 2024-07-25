@@ -1,8 +1,8 @@
 <div align="center">
 
-# GASBT: AWS LAMBDA
+# BING: AWS LAMBDA
 
-*GASBY의 서비스 아키텍쳐에 사용된 LAMBDA 코드 입니다.*
+*BING 서비스 아키텍쳐에 사용된 LAMBDA 코드 입니다.*
 
 [![Static Badge](https://img.shields.io/badge/language-english-red)](./README.md) [![Static Badge](https://img.shields.io/badge/language-korean-blue)](./README-KR.md) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FSinging-voice-conversion%2Fsingtome-model&count_bg=%23E3E30F&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
@@ -10,7 +10,9 @@
 
 <br>
 
-Hello, and thank you for visiting. This GitHub repository contains the implementation code for the model used in the singtome project. If you're interested in learning more about the singtome project, please refer to [this link](#). The project utilizes the RVC (Retrieval Voice Conversion) model to implement vocal transformation features in music. You can find the core implementation of the model [here](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI). For more detailed information on how to use the RVC model and its principles, please consult the linked RVC repository.
+SW중심대학 디지털 경진대회_SW와 생성AI의 만남 : SW 부문
+
+팀 GASBY의 BING 서비스에 사용된 LAMBDA 함수 코드 모음입니다. LAMBDA에서 Layer, Trigger, 환경변수를 제외한 주요 LAMBDA_HANDLDER르 포함한 함수에 대한 코드만 업로드되어 있습니다.
 
 <br>
 
@@ -21,7 +23,7 @@ Hello, and thank you for visiting. This GitHub repository contains the implement
 | Profile | Name | Role |
 | :---: | :---: | :---: |
 | <a href="https://github.com/anselmo228"><img src="https://avatars.githubusercontent.com/u/24919880?v=4" height="120px"></a> | Heechan Chung <br> **anselmo**| Create a Docker Image for Inferring UVR Models <br> Manage AWS S3 buckets, Lambda, and API gateways <br> Managing singtome project model experiments|
-| <a href="https://github.com/jmin314"><img src="https://avatars.githubusercontent.com/u/30928301?v=4(https://avatars.githubusercontent.com/u/30928301?v=4)" height="120px"></a>| MinSeung Jang <br> **moon**| Model Pipeline and Architecture Design <br> Creating a Docker Image for RVC Model training and inference<br> Managing and Operating AWS SageMaker |
+| <a href="https://github.com/jmin314"><img src="https://avatars.githubusercontent.com/u/30928301?v=4(https://avatars.githubusercontent.com/u/30928301?v=4)" height="120px"></a>| MinSeung Jang <br> **JANG**| Model Pipeline and Architecture Design <br> Creating a Docker Image for RVC Model training and inference<br> Managing and Operating AWS SageMaker |
 
 <br>
 
