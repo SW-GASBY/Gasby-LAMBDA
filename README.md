@@ -26,12 +26,12 @@ BING 서비스는 최신 생성 AI 알고리즘을 사용하여 실시간으로 
 
 <div align="center">
 
-<h3> Model part Team members </h3>
+<h3> SERVICE part Team members </h3>
 
 | Profile | Name | Role |
 | :---: | :---: | :---: |
-| <a href="https://github.com/anselmo228"><img src="https://avatars.githubusercontent.com/u/24919880?v=4" height="120px"></a> | Heechan Chung <br> **anselmo**| Create a Docker Image for Inferring UVR Models <br> Manage AWS S3 buckets, Lambda, and API gateways <br> Managing singtome project model experiments|
-| <a href="https://github.com/jmin314"><img src="https://avatars.githubusercontent.com/u/30928301?v=4(https://avatars.githubusercontent.com/u/30928301?v=4)" height="120px"></a>| MinSeung Jang <br> **JANG**| Model Pipeline and Architecture Design <br> Creating a Docker Image for RVC Model training and inference<br> Managing and Operating AWS SageMaker |
+| <a href="https://github.com/anselmo228"><img src="https://avatars.githubusercontent.com/u/24919880?v=4" height="120px"></a> | Heechan Chung <br> **anselmo**| SERVICE MANAGER and Architecture Design <br> Manage AWS S3 buckets, Lambda, and API gateways <br> GPT PROMPTING|
+| <a href="https://github.com/jmin314"><img src="https://avatars.githubusercontent.com/u/30928301?v=4(https://avatars.githubusercontent.com/u/30928301?v=4)" height="120px"></a>| MinSeung Jang <br> **JANG**| MSERVICE MANAGE and Architecture Design <br> CManage AWS S3 buckets, Lambda, and API gateways <br> Managing and Operating Whole sequence of Pipeline|
 
 <br>
 
