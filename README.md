@@ -136,22 +136,6 @@ SW중심대학 디지털 경진대회: SW와 생성 AI의 만남 - SW 부문
 - **Trigger: S3 -** [gasby-actrecog-result](https://ap-northeast-2.console.aws.amazon.com/s3/buckets/gasby-actrecog-result?region=ap-northeast-2)
 
 
-<br>
-
-Through these two models, the entire process of converting an original track into the user's voice is implemented as follows:
-
-1. **Music Separation**: The UVR model is used to separate the background music and vocals from the original track.
-2. **Voice Conversion**: The separated vocals are input into the RVC model to be converted into a specific user's voice.
-3. **Output Generation**: The converted voice is combined with the background music to create the final output.
-
-<br>
-
-This process allows users to experience music converted into their own voice, adding a new dimension to music appreciation. This architecture is designed to clearly understand the complex process involved.
-
-<img src="./img/model_pipeline.png" />
-
-<br>
-
 ## 2. Architecture
 
 This project was designed with a real-service environment in mind and selected AWS (Amazon Web Services) to handle all training and inference tasks in the cloud. Utilizing AWS's robust cloud infrastructure, the following services were employed for model training and inference:
