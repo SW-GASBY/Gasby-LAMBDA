@@ -1,15 +1,21 @@
 import json
 import requests
+import boto3
+
+s3_client = boto3.client('s3')
 
 def lambda_handler(event, context):
-    object_key = event['Records'][0]['s3']['object']['key']
-    folder_name = '/'.join(object_key.split('/')[:-1])
     
-    # api_url = 'http://210.102.178.186:8080/action-predict/predict'
-    api_url = 'http://1.238.80.90:4001/action-predict/predict'
+    bucket_name = 'gasby-mot'
+    object_key = event['Records'][0]['s3']['object']['key']
+    
+    file_url = f'https://{bucket_name}.s3.amazonaws.com/{object_key}'
+    
+    # mot predict trigger
+    api_url = ''
     
     payload = {
-        'uuid': folder_name
+        'file_url': file_url
     }
 
     api_response = requests.post(api_url, json=payload)

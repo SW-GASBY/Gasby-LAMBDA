@@ -10,18 +10,15 @@ def lambda_handler(event, context):
     
     s3_url = f"https://{bucket_name}.s3.amazonaws.com/{folder_name}"
     
-    # API 엔드포인트 URL
-    api_url = 'mot 학습 엔드포인트'
+    # actrecog train url
+    api_url = ''
     
-    # API 요청 데이터
     data = {
         's3_url': s3_url
     }
     
-    # API 호출
     response = requests.post(api_url, json=data)
     
-    # 응답 처리
     if response.status_code == 200:
         return {
             'statusCode': 200,

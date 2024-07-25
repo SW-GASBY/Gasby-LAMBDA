@@ -1,23 +1,26 @@
 import json
 import requests
+import logging
 
-s3_client = boto3.client('s3')
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
 
 def lambda_handler(event, context):
-    
-    bucket_name = 'gasby-mot'
     object_key = event['Records'][0]['s3']['object']['key']
+    folder_name = '/'.join(object_key.split('/')[:-1])
     
-    file_url = f'https://{bucket_name}.s3.amazonaws.com/{object_key}'
-    
-    api_url = 'mot 예 엔드포인트'
+    logger.info(folder_name)
+    api_url = ''
+
     
     payload = {
-        'file_url': file_url
+        'payload': folder_name
     }
-
+    
+    headers = {
+        'Content-Type': 'application/json'
+    }
     api_response = requests.post(api_url, json=payload)
-
     return {
         'statusCode': 200,
         'body': json.dumps('Successfully processed the file and sent API request!')

@@ -1,5 +1,6 @@
 import json
 import requests
+import boto3
 
 s3_client = boto3.client('s3')
 
@@ -10,7 +11,8 @@ def lambda_handler(event, context):
     
     file_url = f'https://{bucket_name}.s3.amazonaws.com/{object_key}'
     
-    api_url = 'actrecog 예측 엔드포인트'
+    # actrecog predict url
+    api_url = ''
     
     payload = {
         'file_url': file_url
