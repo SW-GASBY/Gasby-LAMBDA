@@ -27,9 +27,6 @@ SW중심대학 디지털 경진대회_SW와 생성AI의 만남 : SW 부문
 
 <br>
 
-<h3> Skills </h3>
-
-<img src="./img/skills.png">
 
 </div>
 
