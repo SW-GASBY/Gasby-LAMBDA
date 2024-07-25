@@ -10,9 +10,9 @@
 
 <br>
 
-SW중심대학 디지털 경진대회_SW와 생성AI의 만남 : SW 부문
-
-팀 GASBY의 BING 서비스에 사용된 LAMBDA 함수 코드 모음입니다. LAMBDA에서 Layer, Trigger, 환경변수를 제외한 주요 LAMBDA_HANDLDER르 포함한 함수에 대한 코드만 업로드되어 있습니다.
+SW중심대학 디지털 경진대회: SW와 생성 AI의 만남 - SW 부문
+팀 GASBY의 BING 서비스
+이 리포지토리는 팀 GASBY가 SW중심대학 디지털 경진대회에서 개발한 BING 서비스에 사용된 AWS Lambda 함수의 코드를 포함하고 있습니다. 본 프로젝트는 생성 AI 기술을 활용하여 사용자의 요구에 맞는 다양한 소프트웨어 솔루션을 제공합니다.
 
 <br>
 
