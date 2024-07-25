@@ -158,7 +158,7 @@ BING 서비스는 최신 생성 AI 알고리즘을 사용하여 실시간으로 
 
 ## 3. Other AWS Resources
 
-- **Role**: 최종 Action Recog 결과물(action.json)으로 해설 생성
-- **Endpoint**: Trigger로 작동
+- **S3**:
+<img width="1119" alt="Screenshot 2024-07-25 at 9 15 48 PM" src="https://github.com/user-attachments/assets/6a83c2a3-3f7f-4107-b51e-c53d72e06a97">
 
 
